@@ -2,9 +2,11 @@ import { Fragment, useState, useEffect } from 'react';
 import MainHeader from './components/MainHeader/MainHeader';
 import Login from './components/Login/Login';
 import Home from './components/Home/Home';
+import Upload from './components/MainHeader/Upload';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [showUpload, setShowUpload] = useState(false);
 
   useEffect(() => {
     const storedUserLoggedInInformation = localStorage.getItem('isLoggedIn');
@@ -24,9 +26,22 @@ function App() {
     setIsLoggedIn(false);
   };
 
+  const showUploadHandler = () => {
+    setShowUpload(true);
+  };
+
+  const hideUploadHandler = () => {
+    setShowUpload(false);
+  };
+
   return (
     <Fragment>
-      <MainHeader isAuthenticated={isLoggedIn} onLogout={logoutHandler} />
+      {showUpload && <Upload onClose={hideUploadHandler} />}
+      <MainHeader
+        isAuthenticated={isLoggedIn}
+        onLogout={logoutHandler}
+        onShowUpload={showUploadHandler}
+      />
       <main>
         {!isLoggedIn && <Login onLogin={loginHandler} />}
         {isLoggedIn && <Home onLogout={logoutHandler} />}

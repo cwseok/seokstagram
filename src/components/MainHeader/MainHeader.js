@@ -8,6 +8,7 @@ const MainHeader = (props) => {
       <Navigation
         isLoggedIn={props.isAuthenticated}
         onLogout={props.onLogout}
+        onShowUpload={props.onShowUpload}
       />
     </header>
   );

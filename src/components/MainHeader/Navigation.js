@@ -6,12 +6,12 @@ const Navigation = (props) => {
       <ul>
         {props.isLoggedIn && (
           <li>
-            <a href='/'>Users</a>
+            <button onClick={props.onShowUpload}>Upload</button>
           </li>
         )}
         {props.isLoggedIn && (
           <li>
-            <a href='/'>Admin</a>
+            <button>Search</button>
           </li>
         )}
         {props.isLoggedIn && (
