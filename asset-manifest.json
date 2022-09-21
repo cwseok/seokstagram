@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/seokstagram/static/css/main.fa6889ac.css",
-    "main.js": "/seokstagram/static/js/main.2c47b7a7.js",
+    "main.css": "/seokstagram/static/css/main.44a965c8.css",
+    "main.js": "/seokstagram/static/js/main.bf7b9e01.js",
     "static/js/787.270456cf.chunk.js": "/seokstagram/static/js/787.270456cf.chunk.js",
     "index.html": "/seokstagram/index.html",
-    "main.fa6889ac.css.map": "/seokstagram/static/css/main.fa6889ac.css.map",
-    "main.2c47b7a7.js.map": "/seokstagram/static/js/main.2c47b7a7.js.map",
+    "main.44a965c8.css.map": "/seokstagram/static/css/main.44a965c8.css.map",
+    "main.bf7b9e01.js.map": "/seokstagram/static/js/main.bf7b9e01.js.map",
     "787.270456cf.chunk.js.map": "/seokstagram/static/js/787.270456cf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa6889ac.css",
-    "static/js/main.2c47b7a7.js"
+    "static/css/main.44a965c8.css",
+    "static/js/main.bf7b9e01.js"
   ]
 }
