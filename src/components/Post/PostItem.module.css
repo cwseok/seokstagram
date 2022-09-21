@@ -1,0 +1,29 @@
+.postitem {
+  width: 80%;
+  max-width: 35rem;
+  margin: 10rem auto;
+  padding: 2rem;
+}
+
+.control {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.control h2,
+.control h3 {
+  color: darkslategrey;
+  margin: 0.5rem;
+}
+
+.postimage {
+  width: 35rem;
+  height: 30rem;
+}
+
+.postimage img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}

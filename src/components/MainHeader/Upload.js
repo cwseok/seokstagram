@@ -14,6 +14,10 @@ const Upload = (props) => {
             <input type='file' />
           </div>
           <div className={classes.control}>
+            <label>Title</label>
+            <input type='text' />
+          </div>
+          <div className={classes.control}>
             <label>Content</label>
             <input type='text' />
           </div>
