@@ -1,33 +1,18 @@
-import Button from '../UI/Button/Button';
-import Card from '../UI/Card/Card';
-import classes from './SignUp.module.css';
-import { Fragment } from 'react';
+import SignUpForm from './SignUpForm';
 
 const SignUp = (props) => {
+  const addMemberHandler = (memberData) => {
+    fetch('https://seokstagram-ad8aa-default-rtdb.firebaseio.com/member.json', {
+      method: 'POST',
+      body: JSON.stringify(memberData),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  };
+
   return (
-    <Fragment>
-      <h1 className={classes.title}>Sign Up</h1>
-      <Card className={classes.signup}>
-        <form>
-          <div className={classes.control}>
-            <label htmlFor='email'>E-Mail</label>
-            <input type='email' id='email' />
-          </div>
-          <div className={classes.control}>
-            <label htmlFor='password'>Password</label>
-            <input type='password' id='password' />
-          </div>
-          <div className={classes.control}>
-            <label>Name</label>
-            <input type='name' id='name' />
-          </div>
-          <div className={classes.actions}>
-            <Button onClick={props.onCancel}>Cancel</Button>
-            <Button>Sign up</Button>
-          </div>
-        </form>
-      </Card>
-    </Fragment>
+    <SignUpForm onCancel={props.onCancel} onAddMember={addMemberHandler} />
   );
 };
 
